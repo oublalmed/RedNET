@@ -1,0 +1,250 @@
+body {
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+}
+
+
+/* Navigation bar */
+
+#navigation_after {
+    border-radius: 0;
+    background-color: rgb(197, 37, 37);
+    height: 80px;
+    margin: 0;
+}
+
+#nav-list a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#nav-list a:hover {
+    background-color: rgb(173, 21, 21);
+    border-radius: 45px;
+}
+
+#logo {
+    margin-top: 15px;
+}
+
+.button-nav {
+    margin-top: 20px;
+}
+
+.icon-bar {
+    background-color: aliceblue;
+}
+
+#collapsable-nav {
+    background-color: rgb(114, 17, 17);
+}
+
+
+/*Cover and profile Photo */
+
+#cover_container {
+    height: 300px;
+    width: 1200px;
+    cursor: pointer;
+}
+
+#profilepic_container {
+    background-color: rgb(206, 206, 206);
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#profilepic_username_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 200px;
+}
+
+.profile_username {
+    margin: 10px;
+}
+
+
+/*Profile body*/
+
+#profile_feed,
+#home_feed {
+    background-color: rgb(231, 231, 231);
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#profile-side_items,
+#feed-side_items {
+    padding: 50px;
+    margin: 20px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 20px;
+    height: 200px;
+}
+
+#profile-main_items,
+#feed-main-items {
+    padding: 20px;
+    border-radius: 20px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#publish_box {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(187, 187, 187);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#publish_box_input {
+    margin-bottom: 20px;
+    height: 100px;
+    width: 100%;
+}
+
+#upload_button,
+#post_button {
+    height: 40px;
+    width: 110px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: 0;
+    border-radius: 10%;
+}
+
+#post_button {
+    background-color: rgb(63, 240, 63);
+}
+
+#upload_button {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+#profile_posts,
+#feed_posts {
+    background-color: rgb(187, 187, 187);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#profile-content,
+#feed-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#profile_posts {
+    margin: 20px;
+}
+
+#post_profile_pic {
+    background-color: rgb(80, 80, 80);
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#bar {
+    text-align: center;
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px;
+}
+
+#like_button,
+#comment_button,
+#star_button {
+    height: 40px;
+    width: 110px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: 0;
+    border-radius: 10%;
+    background-color: rgb(233, 233, 233);
+    margin-left: 20px;
+}
+
+
+/* Post section */
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
+
+/* Comment section */
+
+#comment_section {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#comment_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment {
+    width: 100%;
+}
+
+#post_comment_button {}
+
+
+/* footer */
+
+footer {
+    padding: 20px;
+    background-color: rgb(5, 5, 5);
+}
+
+#footer-list li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#footer-list {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/*** Post Approval ***/
+
+#approval {
+    margin: 10px;
+    padding: 20px;
+    color: rgb(223, 223, 223);
+    background-color: rgb(243, 47, 47);
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}

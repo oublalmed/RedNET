@@ -3,7 +3,7 @@ const router = express.Router();
 const PostsControl = require('../Controllers/PostsControl');
 
 router.get('/' , PostsControl.view);
-router.post('/:id' , PostsControl.Approuver);
-router.post('/:id' , PostsControl.Refuser);
+router.post('/approve' , PostsControl.Approuver);
+router.post('/decline' , PostsControl.Refuser);
 
 module.exports = router ;

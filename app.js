@@ -33,9 +33,12 @@ conn.connect((err)=>{
 
 app.use(express.static ('public'));
 app.set('css', express.static(__dirname + 'public/css'));
+app.set('cssClient', express.static(__dirname + 'public/cssClient'));
 app.set('img', express.static(__dirname + 'public/img'));
 app.set('js', express.static(__dirname + 'public/js'));
 app.set('fonts', express.static(__dirname + 'public/fonts'));
+app.set('snippets', express.static(__dirname + 'public/snippets'));
+
 
 //Define Routes
 app.use('/Login' , require('./Routes/Login'));
@@ -43,13 +46,18 @@ app.use('/Acceuil' , require('./Routes/Acceuil'));
 app.use('/Utilisateurs' , require('./Routes/Utilisateurs'));
 app.use('/Posts' , require('./Routes/Posts'));
 app.use('/Fichiers' , require('./Routes/Fichiers'));
+app.use('/Home' , require('./Routes/Home'));
+app.use('/Feed' , require('./Routes/Feed'));
+app.use('/Questions' , require('./Routes/Questions'));
+app.use('/Profile' , require('./Routes/Profile'));
 
 //middleware configuration
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/Views/Admin' );
+hbs.registerPartials(__dirname + '/Views/Client' );
 
 app.get('/',function(req,res){
-  res.render('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Admin\\Login');
+  res.render('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Client\\contactUS');
 });
 
 //Define session

@@ -9,9 +9,9 @@ var conn = mysql.createConnection({
     multipleStatements: true
 });
 
-exports.view = (req, res) => {
+conn.connect();
 
-    conn.connect();
+exports.view = (req, res) => {
 
     var sql = "SELECT idEtudiant,prénom,nom,mailEtud,telEtud,libelleFiliere FROM etudiants E , filiere F WHERE E.idFiliere=F.idFiliere";
 
@@ -25,24 +25,21 @@ exports.view = (req, res) => {
         res.render('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Admin\\utilisateurs', { Users});
     });
 
-    conn.end();
-
 };
 
 exports.Supprimer = (req, res) => {
 
-    conn.connect();
-
-    var id = req.params.idEtudiant ;
+    var id = req.params.id ;
     var sql = "DELETE FROM etudiants WHERE idEtudiant = ? ";
 
     conn.query(sql,[id], function (error, results) {
         if (error) {
             throw error;
         }
-        console.log("ok");
-        //res.render('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Admin\\Utilisteurs');
+
+        console.log(results, id);
+
+        res.redirect('/Utilisateurs')
     });
-    conn.end();
 
 };

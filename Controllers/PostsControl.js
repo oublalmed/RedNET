@@ -9,56 +9,48 @@ var conn = mysql.createConnection({
     multipleStatements: true
 });
 
+conn.connect();
+
+
 exports.view = (req, res) => {
 
-    conn.connect();
-
-    var sql = "SELECT titrePoste,contenuP , datePoste  FROM postes WHERE idEtat = 1";
+    var sql = "SELECT * FROM postes WHERE idEtat in (1,2,3)  ; SELECT * FROM postes WHERE idEtat = 3";
 
     conn.query(sql, function (error, results) {
         if (error) {
             throw error;
         }
-        console.log(results);
-        res.render('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Admin\\Posts', { results });
+        var Tousposts = results[0];
+        var postsDésactive = results[1];
+        res.render('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Admin\\Posts', { Tousposts,postsDésactive });
     });
-
-    conn.end();
-
 };
 
 exports.Approuver = async(req, res) => {
-
-    conn.connect();
-
-    const id = req.params.id ;
+    const id = req.body.id;
     var sql = "UPDATE postes SET idEtat = 2 Where idPoste = ?";
 
-    conn.query(sql, function (error, [id] ,results) {
+    console.log(id)
+
+    conn.query(sql,[id], function (error, results) {
         if (error) {
             throw error;
         }
-        res.redirect('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Admin\\posts', { results });
+        res.redirect('/Posts');
     });
-
-    conn.end();
-
 };
 
 exports.Refuser = async(req, res) => {
-
-    conn.connect();
-
-    const id = req.params.id ;
+    const id = req.body.id ;
     var sql = "UPDATE postes SET idEtat = 3 Where idPoste = ? ";
 
-    conn.query(sql, function (error,[id],results) {
+    conn.query(sql,[id], function (error,results) {
         if (error) {
             throw error;
         }
-        res.redirect('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Admin\\posts', { results });
+        res.redirect('/Posts');
     });
 
-   conn.end();
 
 };
+

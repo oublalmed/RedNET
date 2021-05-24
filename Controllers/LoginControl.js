@@ -33,7 +33,7 @@ exports.view = (req, res) => {
 
     });
 
-    var sql2 = "SELECT idEtudiant,prénom,nom,mailEtud,telEtud,libelleFiliere FROM etudiants E , filiere F WHERE E.idFiliere=F.idFiliere ; SELECT COUNT(*) as nbrs_users FROM etudiants ; SELECT COUNT(*) as nbrs_posts FROM postes ; SELECT COUNT(*) as nbrs_solutions FROM solutions ; ";
+    var sql2 = "SELECT idEtudiant,prénom,nom,mailEtud,telEtud,libelleFiliere FROM etudiants E , filiere F WHERE E.idFiliere=F.idFiliere ; SELECT COUNT(*) as nbrs_users FROM etudiants ; SELECT COUNT(*) as nbrs_posts FROM postes ; SELECT COUNT(*) as nbrs_solutions FROM solutions ; SELECT COUNT(*) as nbrs_fichiers FROM fichiers ; ";
     
     conn.query(sql2, function (error, results) {
         if (error) {
@@ -43,8 +43,9 @@ exports.view = (req, res) => {
         var nbrUsers = results[1][0].nbrs_users;
         var nbrPosts = results[2][0].nbrs_posts;
         var nbrSolutions = results[3][0].nbrs_solutions;
-        console.log(infosUsers,nbrUsers,nbrPosts,nbrSolutions);
-        res.render('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Admin\\acceuil', { infos:infosUsers ,count1:nbrUsers,count2:nbrPosts,count3:nbrSolutions });
+        var nbrFichiers = results[4][0].nbrs_fichiers;
+        console.log(infosUsers,nbrUsers,nbrPosts,nbrSolutions,nbrFichiers);
+        res.render('C:\\Users\\Hp\\VsCode-Projects\\1PFA\\Views\\Admin\\acceuil', { infos:infosUsers ,count1:nbrUsers,count2:nbrPosts,count3:nbrSolutions,count4:nbrFichiers });
     });
 
     conn.end();

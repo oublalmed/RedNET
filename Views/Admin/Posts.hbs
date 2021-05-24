@@ -36,7 +36,7 @@
     <!-- //image logo -->
 
             <div class="logo-icon text-center">
-                <a href="Acceuil.html" title="logo"><img src="img/logo.png" alt="logo-icon"> </a>
+                <a href="/Acceuil" title="logo"><img src="img/logo.png" alt="logo-icon"> </a>
             </div>
             <!-- //logo end -->
 
@@ -44,14 +44,14 @@
 
                 <!-- sidebar nav start -->
                 <ul class="nav nav-pills nav-stacked custom-nav">
-                    <li class="menu"><a href="Acceuil.html"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
+                    <li class="menu"><a href="/Acceuil"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
                     </li>
                     <li class="menu-list">
-                        <a href="Utilisateurs.html"><i class="fa fa-users"></i>
+                        <a href="/Utilisateurs"><i class="fa fa-users"></i>
                             <span>Utilisateurs </span></a>
                     </li>
-                    <li class="active"><a href="Posts.html"><i class="fa fa-th"></i> <span>Posts</span></a></li>
-                    <li class="menu-list"><a href="Fichiers.html"><i class="fa fa-file-text"></i>
+                    <li class="active"><a href="/Posts"><i class="fa fa-th"></i> <span>Posts</span></a></li>
+                    <li class="menu-list"><a href="/Fichiers"><i class="fa fa-file-text"></i>
                             <span>Fichiers</span></a>
                     </li>
                 </ul>
@@ -105,7 +105,7 @@
                                             <h5 class="user-name">Oublal Mohamed</h5>
                                             <span class="status ml-2">En ligne</span>
                                         </li>
-                                        <li class="logout"> <a href="Login.html"><i class="fa fa-power-off"></i>
+                                        <li class="logout"> <a href="/Login"><i class="fa fa-power-off"></i>
                                                 Logout</a> </li>
                                     </ul>
                                 </li>
@@ -125,7 +125,7 @@
                 <!-- breadcrumbs -->
                 <nav aria-label="breadcrumb" class="mb-4">
                     <ol class="breadcrumb my-breadcrumb">
-                        <li class="breadcrumb-item"><a href="Acceuil.html">Acceuil</a></li>
+                        <li class="breadcrumb-item"><a href="/Acceuil">Acceuil</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Posts</li>
                     </ol>
                 </nav>
@@ -137,17 +137,47 @@
                     <h3>Tous les posts</h3>
                 </div>
                 <!-- //card heading -->
-                <!-- content block style 2-->
+                <!-- content block-->
                 <div class="card card_border p-lg-5 p-3 mb-4">
                     <div class="card-body py-3 p-0">
                         <div class="row">
-                            {{#each results}}
+                            {{#each Tousposts}}
+                            <div class="col-lg-6 align-self pl-lg-4 mt-lg-0 mt-4">
+                                <h3 class="block__title mb-lg-4">{{this.titrePoste}}</h3>
+                                <p class="mb-3">{{this.contenuP}}</p>
+                                <p class="mb-lg-5 mb-3"><i class="fa fa-heart" aria-hidden="true"> {{this.nombreLike}} &emsp; &emsp; {{this.datePoste}}</i></p>
+                                <form method='post' action="/posts/approve" style="display: inline;">
+                                    <input type="hidden" name="id" value="{{this.idPoste}}">
+                                    <button class="btn btn-style btn-primary mr-2">Approuver</button>
+                                </form>
+                                 <form method='post' action="/posts/decline" style="display: inline;">
+                                    <input type="hidden" name="id" value="{{this.idPoste}}">
+                                    <button class="btn btn-style border-btn" >Refuser</button>
+                                </form>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <div class="cards__heading">
+                    <h3>les posts désactivés</h3>
+                </div>
+                <div class="card card_border p-lg-5 p-3 mb-4">
+                    <div class="card-body py-3 p-0">
+                        <div class="row">
+                            {{#each postsDésactive}}
                             <div class="col-lg-6 align-self pl-lg-4 mt-lg-0 mt-4">
                                 <h3 class="block__title mb-lg-4">{{this.titrePoste}}</h3>
                                 <p class="mb-3">{{this.contenuP}}</p>
                                 <p class="mb-lg-5 mb-3"><i class="fa fa-heart" aria-hidden="true"> {{this.nombreLike}} &emsp; &emsp; &emsp; {{this.datePoste}}</i></p>
-                                <a href="/posts" class="btn btn-style btn-primary mr-2"> Approuver</a>
-                                <a href="/posts" class="btn btn-style border-btn"> Refuser</a>
+                                <form method='post' action="/posts/approve" style="display: inline;">
+                                    <input type="hidden" name="id" value="{{this.idPoste}}">
+                                    <button class="btn btn-style btn-primary mr-2">Approuver</button>
+                                </form>
+                                 <form method='post' action="/posts/decline" style="display: inline;">
+                                    <input type="hidden" name="id" value="{{this.idPoste}}">
+                                    <button class="btn btn-style border-btn" >Refuser</button>
+                                </form>
                             </div>
                             {{/each}}
                         </div>
@@ -156,7 +186,7 @@
                 <!-- //content block style 2-->
                 <!--footer section start-->
                 <footer class="dashboard">
-                    <p>&copy 2021. All Rights Reserved | Design by <a href="Acceuil.html" target="_blank"
+                    <p>&copy 2021. All Rights Reserved | Design by <a href="/Acceuil" target="_blank"
                             class="text-primary">RedNet.</a></p>
                 </footer>
                 <!--footer section end-->

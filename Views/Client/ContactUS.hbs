@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedNET - Home</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+    <link rel="stylesheet" href="cssClient/bootstrap.min.css">
+    <link rel="stylesheet" href="cssClient/style.css">
+    <link rel="stylesheet" href="cssClient/after_styling.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="profile_body">
+    <header>
+        <nav id="navigation_after" class="nav navbar">
+            <div class="container">
+                <img id="logo" src="img/logo.png" alt="LOGO" height="50px">
+
+                <ul id="nav-list" class="nav navbar-nav navbar-right hidden-xs">
+                    <li id="home_button">
+                        <a href="feed.html"> <img src="img/home.png" alt="" height="25px"> </a>
+                    </li>
+                    <li>
+                        <a id="notification_button"><img src="img/notification.png" alt="" height="25px"></a>
+                    </li>
+                    <li>
+                        <a href="profile.html" id="profile_button"><img src="img/profile.png" alt="Username"
+                                height="25px"><span class="profile_username">Username</span></a>
+                    </li>
+                </ul>
+                <span class="button-nav">
+                    <button id="navbarToggle" type="button" class="button-nav navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </span>
+            </div>
+
+        </nav>
+        <div id="collapsable-nav" class="collapse navbar-collapse hidden-lg">
+            <ul id="nav-list" class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm">
+                <li>
+                    <a id="home_buttoon">
+                        <img src="img/home.png" alt="" height="25px">
+                        <span> Home </span>
+                    </a>
+                </li>
+                <li>
+                    <a id="contact_button">
+                        <img src="img/notification.png" alt="" height="25px">
+                        <span>Notification</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="about_button">
+                        <img src="img/profile.png" alt="" height="25px">
+                        <span> Profile </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!--End Of Header-->
+        <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area bg-img bg-gradient-overlay jarallax">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2 class="page-title"> <strong>Contact [ RedNet ]</strong></h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="/Home">Accueil</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- Breadcrumb Area End -->
+
+    
+    <!-- Contact Us Area Start -->
+    <section class="contact--us-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Us Thumb -->
+                <div class="col-12 col-lg-6">
+                    <div class="contact-us-thumb mb-100">
+                        <img src="img/44.jpg" alt=""  width="500" height="500">
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-12 col-lg-6">
+                    <div class="contact_from_area mb-100 clearfix">
+                        <!-- Contact Heading -->
+                        <div class="contact-heading">
+                            <h4><strong>Contacter-Nous</strong></h4>
+                            <p>envoyer nous votre message</p>
+                        </div>
+                        <div class="contact_form">
+                            <form action="#" method="post">
+                                <div class="contact_input_area">
+                                    <div class="row">
+                                        <!-- Form Group -->
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control mb-30" name="nomUserCt" id="name" placeholder="Votre Nom" required>
+                                            </div>
+                                        </div>
+                                        <!-- Form Group -->
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control mb-30" name="prenomUserCt" id="name-2" placeholder="Votre Prénom" required >
+                                            </div>
+                                        </div>
+                                        <!-- Form Group -->
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control mb-30" name="emailUserCt" id="email" placeholder="E-mail" required>
+                                            </div>
+                                        </div>
+                                        <!-- Form Group -->
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control mb-30" name="sujetCt" id="subject" placeholder="Votre Sujet" required>
+                                            </div>
+                                        </div>
+                                        <!-- Form Group -->
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <textarea  class="form-control mb-30" id="message" name="messageCt" cols="30" rows="6" placeholder="Message" required></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- Button -->
+                                        <div class="col-12">
+                                            <button type="submit" class="btn confer-btn" name="sendMsgCt">Envoyer Message <i class="zmdi zmdi-long-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Us Area End -->
+    <!-- Contact Info Area -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="contact--info-area bg-boxshadow">
+                    <div class="row">
+                        <!-- Single Contact Info -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="single-contact--info text-center">
+                                <!-- Contact Info Icon -->
+                                <div class="contact--info-icon">
+                                    <img src="img/icon-5.png" alt="">
+                                </div>
+                                <h5>Hay agdal , RABAT</h5>
+                            </div>
+                        </div>
+
+                        <!-- Single Contact Info -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="single-contact--info text-center">
+                                <!-- Contact Info Icon -->
+                                <div class="contact--info-icon">
+                                    <img src="img/icon-6.png" alt="">
+                                </div>
+                                <h5>06 66 66 66 66</h5>
+                            </div>
+                        </div>
+
+                        <!-- Single Contact Info -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="single-contact--info text-center">
+                                <!-- Contact Info Icon -->
+                                <div class="contact--info-icon">
+                                    <img src="img/icon-7.png" alt="">
+                                </div>
+                                <h5>RedNet@gmail.com</h5>
+                            </div>
+                        </div>
+
+                        <!-- Single Contact Info -->
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="single-contact--info text-center">
+                                <!-- Contact Info Icon -->
+                                <div class="contact--info-icon">
+                                    <img src="img/icon-8.png" alt="">
+                                </div>
+                                <h5>www.RedNet.com</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr>
+        <div class="container">
+            <ul id="footer-list">
+                <li> <a href="">Home</a> </li>
+                <li> <a href="">About us</a> </li>
+                <li> <a href="">Contact us</a> </li>
+            </ul>
+            <hr>
+            <p>RedNET Copyrights © 2021</p>
+        </div>
+    </footer>
+</body>
+</html>

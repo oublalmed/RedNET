@@ -1,0 +1,25 @@
+<div id="login_placeholder">
+    <main id="main-holder" class="container">
+        <h1 id="login-header">Login</h1>
+
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+        </div>
+
+        <form id="login-form" method="POST" action="/Home">
+            <label for="username-field">Username </label>
+            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="">
+
+            <label for="password-field">Password</label>
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="">
+
+            <button id="login_button_submit" type="submit">Login</button>
+        </form>
+
+        <div id="extras">
+            <a href="">Forgot password?</a>
+            <p>You don't have an account? <a href="">Create one here!</a> </p>
+        </div>
+
+    </main>
+</div>

@@ -1,0 +1,718 @@
+/* html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+} */
+
+body {
+    background-color: black;
+    width: 100%;
+}
+
+
+/*Styling the navigation bar*/
+
+#navigation {
+    border-radius: 0;
+    background-color: rgb(197, 37, 37);
+    height: 80px;
+    margin: 0;
+}
+
+#nav-list a {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#nav-list a:hover {
+    background-color: rgb(173, 21, 21);
+    border-radius: 45px;
+}
+
+#logo {
+    margin-top: 15px;
+
+}
+
+.button-nav {
+    margin-top: 20px;
+}
+
+.icon-bar {
+    background-color: aliceblue;
+}
+
+#collapsable-nav {
+    background-color: rgb(114, 17, 17);
+}
+
+
+/*Styling the welcome section*/
+
+#welcome-section {
+    background: url(../img/EnsiasBG.jpg) no-repeat center;
+    background-size: 100%;
+    height: 720px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-background {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.397);
+    display: flex;
+    justify-content: center;
+}
+
+#welcome-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: xxx-large;
+    color: aliceblue;
+    width: 500px;
+    text-align: center;
+}
+
+.button {
+    margin: 20px;
+    margin-left: 50px;
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+#sign_up {
+    background-color: #ad1515;
+    border: 0;
+}
+
+#login {
+    background-color: transparent;
+    border: 5px solid rgb(255, 241, 241);
+}
+
+#login:hover {
+    animation-name: change_color;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    background-color: #ad1515;
+}
+
+
+/*Styling the features-section*/
+
+#features-section {
+    background-color: rgb(219, 219, 219);
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+.images {
+    display: inline-block;
+    text-align: center;
+}
+
+.image {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#ask,
+#support,
+#social {
+    background-color: rgb(190, 190, 190);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#features-section p {
+    margin-top: 10px;
+    width: 250px;
+    color: rgb(14, 14, 14);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+#spinner {
+    margin-top: 50px;
+}
+
+
+/*Styling footer*/
+
+footer {
+    padding: 20px;
+    background-color: rgb(5, 5, 5);
+}
+
+#footer-list li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#footer-list {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* Profile Styling */
+
+#profile_body {
+    background-color: white;
+    width: 100%;
+}
+
+
+
+
+/*Cover and profile Photo */
+
+#cover_container {
+    height: 300px;
+    width: 1200px;
+    cursor: pointer;
+}
+
+#profilepic_container {
+    background-color: white;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#profilepic_username_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 200px;
+}
+
+.profile_username {
+    margin: 10px;
+}
+
+
+/*Profile body*/
+
+#profile_feed,
+#home_feed {
+    background-color: white;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#profile-side_items,
+#feed-side_items {
+    padding: 50px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 20px;
+    height: 200px;
+}
+
+#profile-main_items,
+#feed-main-items {
+    padding: 20px;
+    border-radius: 20px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#publish_box {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#publish_box_input {
+    margin-bottom: 20px;
+    height: 100px;
+    width: 100%;
+}
+
+#upload_button,
+#post_button {
+    height: 40px;
+    width: 110px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: 0;
+    border-radius: 10%;
+}
+
+#post_button {
+    background-color: rgb(63, 240, 63);
+}
+
+#upload_button {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+#profile_posts,
+#feed_posts {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#profile-content,
+#feed-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#profile_posts {
+    margin: 20px;
+}
+
+
+#bar {
+    text-align: center;
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px;
+}
+
+#like_button,
+#comment_button,
+#star_button {
+    height: 40px;
+    width: 110px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: 0;
+    border-radius: 10%;
+    background-color: rgb(233, 233, 233);
+    margin-left: 20px;
+}
+
+
+/* Post section */
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
+
+/* Comment section */
+
+#comment_section {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#comment_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment {
+    width: 100%;
+}
+
+
+/* #post_comment_button {} */
+
+
+/* footer */
+
+footer {
+    padding: 20px;
+    background-color: rgb(5, 5, 5);
+}
+
+#footer-list li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#footer-list {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/*** Post Approval ***/
+
+#approval {
+    margin: 10px;
+    padding: 20px;
+    color: rgb(223, 223, 223);
+    background-color: rgb(243, 47, 47);
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+
+/* Login and Signup styling */
+
+#main-holder {
+    width: 700px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(202, 29, 29);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+}
+
+
+/* #login-error-msg-holder,
+#signup-error-msg-holder {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+} */
+
+#login-error-msg {
+    width: 23%;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8a0000;
+    border: 1px solid #8a0000;
+    background-color: #e58f8f;
+    opacity: 0;
+}
+
+#error-msg-second-line {
+    display: block;
+}
+
+#login_placeholder,
+#singup_placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#singup-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup_field {
+    width: 200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form-field::placeholder,
+.singup-form-field::placeholder {
+    color: #3a3a3a;
+}
+
+.login-form-field,
+.singup-form-field {
+    border: none;
+    border-bottom: 1px solid #3a3a3a;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: none;
+    padding: 0px 0px 5px 5px;
+}
+
+#login_button_submit,
+#singup_button_submit {
+    width: 250px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #0a0a0a;
+}
+
+#login_button_submit {
+    width: 200px;
+}
+
+#login-header,
+#singup-header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: aliceblue;
+}
+
+#singup-form label,
+#login-form label {
+    justify-self: flex-start;
+    color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+#extras {
+    margin: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+
+#extras a {
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+
+/*Media queries*/
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {}
+
+
+/* Animation */
+
+@keyframes change_color {
+    0% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #ad1515;
+    }
+}
+
+
+/* :: 20.0 Contact Area CSS */
+.contact-our-area {
+    position: relative;
+    z-index: 1;
+    background-color: #151853; }
+    .contact-our-area .contact-information .single-contact-info {
+      margin-bottom: 25px; }
+      .contact-our-area .contact-information .single-contact-info p {
+        color: #9293bc;
+        margin-bottom: 5px; }
+      .contact-our-area .contact-information .single-contact-info h6 {
+        font-size: 18px;
+        color: #ddd9d9;
+        margin-bottom: 0; }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          .contact-our-area .contact-information .single-contact-info h6 {
+            font-size: 16px; } }
+        @media only screen and (max-width: 767px) {
+          .contact-our-area .contact-information .single-contact-info h6 {
+            font-size: 14px; } }
+      .contact-our-area .contact-information .single-contact-info:last-child {
+        margin-bottom: 0; }
+    .contact-our-area .contact_from_area {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 10px; }
+  
+  .form-group .form-control {
+    -webkit-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+    background-color: transparent;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-radius: 0;
+    border-bottom: 1px solid #4d507d;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: #9293bc;
+    padding-left: 0; }
+    .form-group .form-control:focus {
+      box-shadow: none; }
+    .form-group .form-control:active, .form-group .form-control:focus {
+      border-bottom-color: #ffffff; }
+  .form-group textarea.form-control {
+    height: 80px; }
+  
+  /* :: Contact us single page CSS */
+  .contact--us-area .row {
+    margin-right: -25px;
+    margin-left: -25px; }
+    @media only screen and (max-width: 767px) {
+      .contact--us-area .row {
+        margin-left: -15px;
+        margin-right: -15px; } }
+    .contact--us-area .row .col-12 {
+      padding-left: 25px;
+      padding-right: 25px; }
+      @media only screen and (max-width: 767px) {
+        .contact--us-area .row .col-12 {
+          padding-left: 15px;
+          padding-right: 15px; } }
+  .contact--us-area .contact-us-thumb img {
+    border-radius: 10px; }
+  .contact--us-area .contact_from_area .contact-heading h4 {
+    font-size: 25px;
+    color: #111343;
+    text-transform: uppercase; }
+  .contact--us-area .contact_from_area .contact-heading p {
+    color: #5d5e8d;
+    margin-bottom: 30px; }
+  
+  .contact_input_area .form-group .form-control {
+    border-bottom: 1px solid #dbdcf1;
+    color: #9293bc; }
+    .contact_input_area .form-group .form-control:active, .contact_input_area .form-group .form-control:focus {
+      border-bottom-color: #5d5e8d; }
+  .contact_input_area .form-group textarea.form-control {
+    height: 70px; }
+  
+  .contact--info-area {
+    padding: 40px 50px 0;
+    position: relative;
+    z-index: 22;
+    top: -75px;
+    background-color: #ffffff;
+    border-radius: 10px; }
+    .contact--info-area .single-contact--info {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 50px; }
+      .contact--info-area .single-contact--info h5 {
+        color: #111343;
+        font-size: 16px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        display: inline-block; }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          .contact--info-area .single-contact--info h5 {
+            font-size: 14px; } 
+        
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Oswald|Poppins');
+        body {
+            /* font-family: 'Oswald', sans-serif; */
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card-box {
+            background: #FAFAFA;
+            min-height: 300px;
+            position: relative;
+            padding: 30px 30px 20px;
+            margin-bottom: 20px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .card-box:hover {
+            background: linear-gradient(to right, #1fa2ff17 0%, #12d8fa2b 51%, #1fa2ff36 100%);
+        }
+
+        .card-box:after {
+            display: block;
+            background: #2196F3;
+            border-top: 2px solid #2196F3;
+            content: '';
+            width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+
+        .card-title h2 {
+            margin: 0;
+            padding-top: 5%;
+            color: #2196F3;
+            font-family: 'Oswald', High Tower Text;
+            text-transform: uppercase;
+            font-size: 24px;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .card-title p {
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+

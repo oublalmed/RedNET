@@ -23,7 +23,7 @@
 
 			<!-- logo start -->
 			<div class="logo">
-				<h1><a href="Acceuil.html">RedNet</a></h1>
+				<h1><a href="/Acceuil">RedNet</a></h1>
 			</div>
 
 			<!-- if logo is image enable this -->
@@ -36,7 +36,7 @@
     <!-- //image logo -->
 
 			<div class="logo-icon text-center">
-				<a href="Acceuil.html" title="logo"><img src="img/logo.png" alt="logo-icon"> </a>
+				<a href="/Acceuil" title="logo"><img src="img/logo.png" alt="logo-icon"> </a>
 			</div>
 			<!-- //logo end -->
 
@@ -47,12 +47,9 @@
 					<li class="active"><a href="/Acceuil"><i class="fa fa-tachometer"></i>
 					<span>Dashboard</span></a>
 					</li>
-					<li class="menu-list">
-						<a href="/Utilisateurs"><i class="fa fa-users"></i>
-							<span>Utilisateurs </span></a>
-					</li>
-					<li><a href="Posts.html"><i class="fa fa-th"></i> <span>Posts</span></a></li>
-					<li><a href="Fichiers.html"><i class="fa fa-file-text"></i> <span>Fichiers</span></a></li>
+					<li><a href="/Utilisateurs"><i class="fa fa-users"></i> <span>Utilisateurs</span></a></li>
+					<li><a href="/Posts"><i class="fa fa-th"></i> <span>Posts</span></a></li>
+					<li><a href="/Fichiers"><i class="fa fa-file-text"></i> <span>Fichiers</span></a></li>
 				</ul>
 				<!-- //sidebar nav end -->
 				<!-- toggle button start -->
@@ -104,7 +101,7 @@
 											<h5 class="user-name">Oublal Mohamed</h5>
 											<span class="status ml-2">En ligne</span>
 										</li>
-										<li class="logout"> <a href="#sign-up.html"><i class="fa fa-power-off"></i>
+										<li class="logout"> <a href="/Login"><i class="fa fa-power-off"></i>
 												Logout</a> </li>
 									</ul>
 								</li>
@@ -158,7 +155,7 @@
 								<div class="col-sm-6 pr-sm-2 statistics-grid">
 									<div class="card card_border border-primary-top p-4">
 										<i class="lnr lnr-cloud-download"> </i>
-										<h3 class="text-success number">0</h3>
+										<h3 class="text-success number">{{count4}}</h3>
 										<p class="stat-text">Fichiers</p>
 									</div>
 								</div>
@@ -215,18 +212,20 @@
 					<div class="cards__heading">
 						<h3>Les Filiéres</h3>
 					</div>
+					
 					<div class="row" style="margin-left: -15">
 						<div class="col-xl-6 pr-xl-2">
 							<div class="row">
+								{{#each rows}}
 								<div class="col-sm-6 pr-sm-2 statistics-grid">
 									<div class="card card_border border-primary-top p-4">
-										<h3 class="text-primary number">2 </h3>
+										<h3 class="text-primary number">{{count11}}</h3>
 										<p class="stat-text">IWIM</p>
 									</div>
 								</div>
 								<div class="col-sm-6 pl-sm-2 statistics-grid">
 									<div class="card card_border border-primary-top p-4">
-										<h3 class="text-secondary number">0</h3>
+										<h3 class="text-secondary number">{{count33}}</h3>
 										<p class="stat-text">IA</p>
 									</div>
 								</div>
@@ -236,13 +235,13 @@
 							<div class="row">
 								<div class="col-sm-6 pr-sm-2 statistics-grid">
 									<div class="card card_border border-primary-top p-4">
-										<h3 class="text-success number">0</h3>
+										<h3 class="text-success number">{{count22}}</h3>
 										<p class="stat-text">GL</p>
 									</div>
 								</div>
 								<div class="col-sm-6 pl-sm-2 statistics-grid">
 									<div class="card card_border border-primary-top p-4">
-										<h3 class="text-danger number">0</h3>
+										<h3 class="text-danger number">{{count55}}</h3>
 										<p class="stat-text">SSI</p>
 									</div>
 								</div>
@@ -252,13 +251,13 @@
 							<div class="row">
 								<div class="col-sm-6 pr-sm-2 statistics-grid">
 									<div class="card card_border border-primary-top p-4">
-										<h3 class="text-primary number">1</h3>
+										<h3 class="text-primary number">{{count88}}</h3>
 										<p class="stat-text">IDF</p>
 									</div>
 								</div>
 								<div class="col-sm-6 pl-sm-2 statistics-grid">
 									<div class="card card_border border-primary-top p-4">
-										<h3 class="text-secondary number">0</h3>
+										<h3 class="text-secondary number">{{count44}}</h3>
 										<p class="stat-text">EM-BI</p>
 									</div>
 								</div>
@@ -268,19 +267,21 @@
 							<div class="row">
 								<div class="col-sm-6 pr-sm-2 statistics-grid">
 									<div class="card card_border border-primary-top p-4">
-										<h3 class="text-success number">0</h3>
+										<h3 class="text-success number">{{count66}}</h3>
 										<p class="stat-text">E-Logistique</p>
 									</div>
 								</div>
 								<div class="col-sm-6 pl-sm-2 statistics-grid">
 									<div class="card card_border border-primary-top p-4">
-										<h3 class="text-danger number">0</h3>
+										<h3 class="text-danger number">{{count77}}</h3>
 										<p class="stat-text">ISEM</p>
 									</div>
 								</div>
 							</div>
 						</div>
+						{{/each}}
 					</div>
+					
 				</div>
 				<!-- //statistics data -->
 

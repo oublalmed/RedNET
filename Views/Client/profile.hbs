@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedNET - Home</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+    <link rel="stylesheet" href="cssClient/bootstrap.min.css">
+    <link rel="stylesheet" href="cssClient/after_styling.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="profile_body">
+    <header>
+        <nav id="navigation_after" class="nav navbar">
+            <div class="container">
+                <img id="logo" src="img/logo.png" alt="LOGO" height="50px">
+
+                <ul id="nav-list" class="nav navbar-nav navbar-right hidden-xs">
+                    <li id="home_button">
+                        <a href="feed.html"> <img src="img/home.png" alt="" height="25px"> </a>
+                    </li>
+                    <li>
+                        <a id="notification_button"><img src="img/notification.png" alt="" height="25px"></a>
+                    </li>
+                    <li>
+                        <a href="profile.html" id="profile_button"><img src="img/profile.png" alt="Username"
+                                height="25px"><span class="profile_username">Meedoublal</span></a>
+                    </li>
+                </ul>
+                <span class="button-nav">
+                    <button id="navbarToggle" type="button" class="button-nav navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </span>
+            </div>
+
+        </nav>
+        <div id="collapsable-nav" class="collapse navbar-collapse hidden-lg">
+            <ul id="nav-list" class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm">
+                <li>
+                    <a id="home_buttoon">
+                        <img src="img/home.png" alt="" height="25px">
+                        <span> Home </span>
+                    </a>
+                </li>
+                <li>
+                    <a id="contact_button">
+                        <img src="img/notification.png" alt="" height="25px">
+                        <span>Notification</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="about_button">
+                        <img src="img/profile.png" alt="" height="25px">
+                        <span> Profile </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!--End Of Header-->
+    <center>
+        <div id="profile-main_items">
+            <div id="publish_box">
+                <form method="POST" >
+                    <input type="text" id="titre" name="titre" placeholder="saisir le titre" size="77"><BR>
+                    <br>
+                    <textarea name="posts" rows="10" cols="80" placeholder="Publier votre post "></textarea>
+                    <br> <br>
+                    <input type="file" class="custom-file-input" id="validatedCustomFile" name="chemin" required>
+                    <BR>
+                    <div id="publish_box_buttons">
+                        <br>
+                        <button type="file" id="upload_button"> <img src="img/upload.png" alt="" height="15px"> Upload
+                        </button> &emsp; &emsp;&emsp; &emsp;
+                        <button type="submit" id="post_button"> <img src="img/send.png" alt="" height="15px"> Post
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="loading_placeholder">
+
+            </div>
+
+            <div id="profile_posts">
+               {{#each results}}
+                <div id="post 1" class="post">
+                    <div class="user">
+                        <div id="post_profile_pic">
+                        </div>
+                        <div>
+                            <span class="post_username"><strong>{{this.username}}</strong></span>
+                        </div>
+                    </div>
+                    <div class="post_content">
+                        <p>{{this.contenuP}}</p>
+                        <p><strong>{{this.datePoste}}</strong></p>
+                    </div>
+                    <div id="bar">
+                        <button id="like_button"> <img src="img/like_before.png" alt="" height="20px"> </button>
+                        <button id="comment_button"> <img src="img/comment.png" alt="" height="20px"> </button>
+                        <button id="star_button"> <img src="img/star-before.png" alt="" height="20px"> </button>
+                    </div>
+                    <div id="comment_section">
+                        <div class="comment_group">
+                        </div>
+
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            <!--End Of profile posts-->
+        </div>
+        <!--End Of Main items-->
+        </div>
+        <!--End Of Content-->
+        </div>
+        <!--End Of profile feed-->
+        </div>
+    </center>
+    <footer>
+        <hr>
+        <div class="container">
+            <ul id="footer-list">
+                <li> <a href="">Home</a> </li>
+                <li> <a href="">About us</a> </li>
+                <li> <a href="">Contact us</a> </li>
+            </ul>
+            <hr>
+            <p>RedNET Copyrights © 2021</p>
+        </div>
+    </footer>
+
+
+    <script src="js/jquery-3.5.1.min.js ">
+    </script>
+    <script src="js/bootstrap.js ">
+    </script>
+    <script src="js/profile.js ">
+    </script>
+</body>
+
+</html>
